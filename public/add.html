@@ -1,0 +1,9 @@
+<button ui-sref='home' type="button" name="button">home</button>
+<button ui-sref='products' type="button" name="button">products</button>
+<button ui-sref='add' type="button" name="button">add product</button>
+
+<h1>Create a Product</h1>
+
+Name: <input ng-model='newName' type="text" name="name" placeholder="racquet name">
+Price: <input ng-model='newPrice' type="text" name="name" placeholder='price of racquet'>
+<button ng-click='addNew(newName, newPrice)' type="button" name="button">submit</button>
