@@ -15,6 +15,15 @@ $interval(function() {
 
 $scope.addNew = function(newName, newPrice) {
   mainService.addNew(newName, newPrice);
+},
+
+$scope.deleteProduct = function(param) {
+  console.log(param);
+  var deleteId = param;
+  console.log('ng-model before: ' + $scope.idDelete);
+  $scope.idDelete = '';
+  console.log('ng-model after: ' + $scope.idDelete);
+  mainService.deleteProduct(deleteId);
 }
 
 

@@ -20,8 +20,11 @@ var productsCtrl = require('./productsCtrl');
 var db = app.get('db');
 
 app.get('/products', productsCtrl.getProducts);
+app.get('/test', productsCtrl.test);
+
 app.post('/addProduct', productsCtrl.addProduct);
 
+app.delete('/delete/:id', productsCtrl.delete);
 
 
 

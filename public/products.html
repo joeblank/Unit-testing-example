@@ -4,6 +4,10 @@
 
 <h1>Products</h1>
 
+<h2>Delete a product</h2>
+<input ng-model='idDelete' type="text" name="name" placeholder="Enter an id #...">
+<button ng-click='deleteProduct(idDelete)' type="button" name="button">Delete</button>
+
 <div class="" ng-repeat='prod in products'>
 <h2>Name: {{prod.name}}</h2>
 <h2>Price: {{prod.price}}</h2>

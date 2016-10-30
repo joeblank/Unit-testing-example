@@ -23,6 +23,14 @@ this.addNew = function(newName, newPrice) {
       price: newPrice
     }
   })
+};
+
+this.deleteProduct = function(deleteId) {
+  console.log('service: ' + deleteId);
+  return $http({
+    method: "DELETE",
+    url: "/delete/" + deleteId
+  })
 }
 
 })

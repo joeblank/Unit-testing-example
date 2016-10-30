@@ -16,7 +16,17 @@ module.exports = {
     db.create_product([name, price], function(err, prod) {
       res.status(200).json('created!');
     })
+  },
+  test: function(req,res,next) {
+    res.status(200).json('talking');
+  },
+  delete: function(req, res) {
+    var id = req.params.id;
+    db.delete_product([id], function(err, prod) {
+      res.status(200).json('deleted!');
+    })
   }
+
 
 
 }
